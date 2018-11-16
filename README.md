@@ -13,6 +13,7 @@ $ yarn start
 ## TODO
 
 * [ ] Support use dva model in sub modules
+* [ ] Support hash browser
 
 ## LICENSE
 
