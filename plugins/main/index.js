@@ -11,7 +11,7 @@ export default (api, options = {}) => {
   api.addHTMLHeadScript(() => {
     const scripts = (options.scripts || []).map(sub => {
       return { src: sub };
-    })
+    });
     return [
       { src: 'https://unpkg.com/react@16.7.0-alpha.2/umd/react.development.js' },
       { src: 'https://unpkg.com/react-dom@16.7.0-alpha.2/umd/react-dom.development.js' },
