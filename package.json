@@ -1,0 +1,10 @@
+{
+  "scripts":  {
+    "start": "APP_ROOT=packages/main umi dev",
+    "users:build": "COMPRESS=none APP_ROOT=packages/users umi build && cp packages/users/dist/* packages/main/public"
+  },
+  "devDependencies": {
+    "umi": "^2.2.7",
+    "umi-plugin-react": "^1.2.3"
+  }
+}

@@ -1,0 +1,11 @@
+# yarn
+yarn.lock
+
+# npm
+node_modules
+package-lock.json
+
+# umi
+.umi
+.umi-production
+dist
