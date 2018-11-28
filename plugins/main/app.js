@@ -5,6 +5,9 @@ export function patchRoutes(routes) {
       // add routes under first layout
       routes[0].routes.unshift(route);
     });
+    (repo.models || []).forEach(model => {
+      window.g_app.model(model);
+    });
   });
   window.g_routes = routes;
 }

@@ -1,5 +1,6 @@
 import assert from 'assert';
 import { join, relative } from 'path';
+import globby from 'globby';
 
 export default (api) => {
   const { paths, winPath } = api;
@@ -27,6 +28,18 @@ export default (api) => {
       });
   }
 
+  function findModels() {
+    const models = [
+      ...(globby.sync('**/models/**/*.js', {
+        cwd: paths.absSrcPath,
+      })),
+      ...(globby.sync('**/model.js', {
+        cwd: paths.absSrcPath,
+      })),
+    ];
+    return models;
+  }
+
   api.onStart(() => {
     process.env.HTML = 'none';
   });
@@ -34,11 +47,16 @@ export default (api) => {
   api.onGenerateFiles(() => {
     const routes = api.routes;
     const routesContent = stripJSONQuotes(routesToJSON(routes));
+    const models = findModels().map(model => {
+      return `require('../../${model}').default`;
+    });
+    console.log('models', models);
     const content = `
 window.g_umi = window.g_umi || {};
 window.g_umi.monorepo = window.g_umi.monorepo = [];
 window.g_umi.monorepo.push({
-  routes: ${routesContent}
+  routes: ${routesContent},
+  models: [${models.join(',')}],
 });
     `.trim();
     api.writeTmpFile('submodule.js', content);
@@ -52,6 +70,7 @@ window.g_umi.monorepo.push({
     config.externals({
       'react': 'window.React',
       'react-dom': 'window.ReactDOM',
+      'dva': 'window.dva',
     });
   });
 }

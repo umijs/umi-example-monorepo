@@ -43,8 +43,8 @@ $ yarn start
 
 ## TODO
 
-* [ ] Support use dva model in sub modules
-* [ ] Support hash browser
+* [x] Support use dva model in sub modules
+* [ ] Support browser history
 
 ## LICENSE
 

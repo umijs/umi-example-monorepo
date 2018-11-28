@@ -5,6 +5,7 @@ export default (api, options = {}) => {
     config.externals({
       'react': 'window.React',
       'react-dom': 'window.ReactDOM',
+      'dva': 'window.dva',
     });
   });
 
@@ -15,6 +16,7 @@ export default (api, options = {}) => {
     return [
       { src: 'https://unpkg.com/react@16.7.0-alpha.2/umd/react.development.js' },
       { src: 'https://unpkg.com/react-dom@16.7.0-alpha.2/umd/react-dom.development.js' },
+      { src: 'https://unpkg.com/dva@2.4.1/dist/dva.min.js' },
       ...scripts,
     ];
   });
@@ -26,6 +28,6 @@ export default (api, options = {}) => {
   });
 
   api.addRuntimePlugin(
-    join(__dirname, 'runtime.js'),
+    join(__dirname, 'app.js'),
   );
 }
