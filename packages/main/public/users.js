@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../../../code/github.com/umijs/umi/packages/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!***********************************************************************************************************************************!*\
-  !*** /Users/chencheng/code/github.com/umijs/umi/packages/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \***********************************************************************************************************************************/
+/***/ "../../../../code/github.com/umijs/umi/packages/umi-build-dev/node_modules/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**************************************************************************************************************************************************************!*\
+  !*** /Users/chencheng/code/github.com/umijs/umi/packages/umi-build-dev/node_modules/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -3997,7 +3997,7 @@ module.exports = {"normal":"normal___d4l2S"};
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../../../../code/github.com/umijs/umi/packages/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../../../../code/github.com/umijs/umi/packages/umi-build-dev/node_modules/af-webpack/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true

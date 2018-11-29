@@ -3,7 +3,7 @@ import { join, relative } from 'path';
 import globby from 'globby';
 
 export default (api) => {
-  const { paths, winPath } = api;
+  const { cwd, paths, winPath } = api;
   const isDev = process.env.NODE_ENV === 'development';
 
   if (isDev) return;
@@ -13,7 +13,7 @@ export default (api) => {
     return JSON.stringify(routes, (key, value) => {
       switch (key) {
         case 'component':
-          const relPath = winPath(relative(paths.absTmpDirPath, join(paths.absSrcPath, value)))
+          const relPath = winPath(relative(paths.absTmpDirPath, join(cwd, value)))
           return `require('${relPath}').default`;
         default:
           return value;
@@ -50,7 +50,6 @@ export default (api) => {
     const models = findModels().map(model => {
       return `require('../../${model}').default`;
     });
-    console.log('models', models);
     const content = `
 window.g_umi = window.g_umi || {};
 window.g_umi.monorepo = window.g_umi.monorepo = [];
