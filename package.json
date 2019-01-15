@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "globby": "^7.1.1",
-    "umi": "^2.2.7",
-    "umi-plugin-react": "^1.2.3"
+    "umi": "^2.4.2",
+    "umi-plugin-react": "^1.4.0"
   }
 }
