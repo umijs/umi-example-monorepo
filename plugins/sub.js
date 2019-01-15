@@ -31,10 +31,10 @@ export default (api) => {
   function findModels() {
     const models = [
       ...(globby.sync('**/models/**/*.js', {
-        cwd: paths.absSrcPath,
+        cwd: paths.absPagesPath,
       })),
       ...(globby.sync('**/model.js', {
-        cwd: paths.absSrcPath,
+        cwd: paths.absPagesPath,
       })),
     ];
     return models;
