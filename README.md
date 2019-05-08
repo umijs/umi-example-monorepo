@@ -46,6 +46,10 @@ $ yarn start
 * [x] Support use dva model in sub modules
 * [ ] Support browser history
 
+## Questions & Suggestions
+
+Please open an issue [here](https://github.com/umijs/umi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
+
 ## LICENSE
 
 MIT
